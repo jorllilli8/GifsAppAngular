@@ -3,9 +3,14 @@
       Gifs-App
     </h3>
     <hr class="text-white">
+    <button type="button" class="btn btn-danger" (click)="removeHistorial()">Delete</button>
+    <hr class="text-white">
     <div class="list-group list-reset">
-      <a href="#" class = "list-group-item list-group-item-action p-3" *ngFor="let busqueda of historial">
-      {{busqueda | titlecase}}
+      <a href="#"
+      (click) = "buscar(item)" 
+      class = "list-group-item list-group-item-action p-3" 
+      *ngFor="let item of historial">
+      {{item | titlecase}}
       </a>
     </div>
 </div>
